@@ -1,0 +1,75 @@
+local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/insanedude59/UILib/main/source"))();
+lib:SetTitle("Vapeware")
+
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Vapeware",
+	Text = "Hello, this is the very early beta of Vapeware hub so feel free to report any bugs",
+	})
+
+--Localstuff
+local tab1 = lib:NewTab("Character", "Character scripts")
+
+tab1:NewTextBox("WalkSpeed","Enter WalkSpeed Here",function(value)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
+end)
+tab1:NewButton("FE Kill",function()
+    loadstring(game:HttpGet('https://cdn.discordapp.com/attachments/1020270167072182342/1037755815899168801/KillPlayerF20.txt'))()
+end)
+tab1:NewButton("Infinite Yield",function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+tab1:NewButton("Fates Admin",function()
+    loadstring(game:HttpGet('https://cdn.discordapp.com/attachments/1020270167072182342/1037752294860664872/Fates_Admin.lua'))()
+end)
+tab1:NewButton("Domain X",function()
+    loadstring(game:HttpGet('https://cdn.discordapp.com/attachments/1020270167072182342/1037753092227215450/Domain_X.lua'))()
+end)
+tab1:NewButton("Not-So-Cloaker moves",function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/yjxXnxbS'))()
+end)
+
+--Chat
+local tab2 = lib:NewTab("Chat", "Best feature is Cloaker quotes")
+
+tab2:NewTextBox("Say","Enter the message here",function(value)
+local ohString1 = (value)
+local ohString2 = "All"
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ohString1, ohString2)
+end)
+
+tab2:NewDropdown("Cloaker",{"We call this a difficulty tweak!", "You call this police brutality?", "Wow! That was a nice workout, i think i'll have a protein drink and hit the shower"},"hi",function(selected)
+local ohString1 = (selected)
+local ohString2 = "All"
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ohString1, ohString2)
+end)
+
+tab2:NewButton("Chathax V1",function()
+    loadstring(game:HttpGet('https://cdn.discordapp.com/attachments/1020270167072182342/1037742807986741319/Chat_Hax_By_Security_Hacker.txt'))()
+end)
+
+--Games
+local tab3 = lib:NewTab("Game scripts", "A collection of game specfic scripts")
+
+tab3:NewButton("Decaying Winter",function()
+    loadstring(game:HttpGet('https://cdn.discordapp.com/attachments/1020270167072182342/1037746833188995072/vapewaredw.txt'))()
+end)
+tab3:NewButton("A Universal Time",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/sannin9000/scripts/main/aut.lua"))()
+end)
+tab3:NewButton("No-Scope arcade",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Kitzoon/Rogue-Hub/main/Main.lua", true))()
+end)
+tab3:NewButton("Kat",function()
+    loadstring(game:HttpGet("https://cdn.discordapp.com/attachments/1020270167072182342/1037748666275995729/kinghub.txt", true))()
+end)
+tab3:NewButton("Evade",function()
+    loadstring(game:HttpGet("https://cdn.discordapp.com/attachments/1020270167072182342/1037748666275995729/kinghub.txt", true))()
+end)
+tab3:NewButton("Town",function()
+    loadstring(game:HttpGet("https://cdn.discordapp.com/attachments/1020270167072182342/1037749610619359272/town.txt", true))()
+end)
+tab3:NewButton("Mad city SA",function()
+    loadstring(game:HttpGet("https://cdn.discordapp.com/attachments/1020270167072182342/1037750801122213888/mc.txt", true))()
+end)
